@@ -18,7 +18,8 @@ def main():
             for clave, valor in resultado.items():
                 print(f"{clave}: {valor}")
         elif opcion == '2':
-            guardar_resultados(datos)
+            resultados = calcular_estadisticas(datos)
+            guardar_resultados(datos, resultado)
             print("Resultados guardados en 'resultados.txt'.")
         elif opcion == '3':
             print("Gracias por usar la Calculadora de Estadísticas Personales")

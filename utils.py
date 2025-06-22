@@ -33,7 +33,7 @@ def mostrar_menu():
           """)  # Muestra el menú en pantalla
     return input("Ingrese su opción: ")  # Pide al usuario que ingrese una opción y la devuelve 
 
-def guardar_resultados(lista_numeros):
+def guardar_resultados(lista_numeros, estadisticas):
     '''
     Guarda los datos ingresados por el usuario en un archivo de texto.
     '''
@@ -43,4 +43,7 @@ def guardar_resultados(lista_numeros):
             archivo.write(str(lista_numeros[i]))  # Escribe el número como texto
             if i != len(lista_numeros) - 1:  # Si no es el último número
                 archivo.write(',')  # Escribe una coma después
-
+        
+        archivo.write('Estadisticas calculadas:\n') 
+        for clave, valor in estadisticas.items():  # Recorre las estadísticas
+            archivo.write(f"{clave}: {valor}\n")  # Escribe cada estadística en el archivo  
