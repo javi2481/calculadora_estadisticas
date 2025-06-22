@@ -20,7 +20,7 @@ def main():
         elif opcion == '2':
             resultados = calcular_estadisticas(datos)
             guardar_resultados(datos, resultado)
-            print("Resultados guardados en 'resultados.txt'.")
+            print("Resultados guardados en 'data/resultados.txt'.")
         elif opcion == '3':
             print("Gracias por usar la Calculadora de Estadísticas Personales")
             break
@@ -29,4 +29,3 @@ def main():
     
 if __name__ == "__main__":
     main()  # Llama a la función principal para iniciar el programa
-    

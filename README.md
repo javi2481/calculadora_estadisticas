@@ -15,20 +15,32 @@ También ofrece la opción de guardar los resultados en un archivo de texto.
 
 ---
 
+## 🛠️ Requisitos previos
+
+- Python 3.8 o superior
+- No se requieren librerías externas (solo módulos estándar)
+
+---
+
 ## 🚀 Cómo ejecutar el proyecto
 
 ### 1. Clonar el repositorio o copiar el proyecto
 ```bash
-https://github.com/javi2481/calculadora_estadisticas.git
+git clone https://github.com/javi2481/calculadora_estadisticas.git
 ```
 
 ### 2. Crear y activar un entorno virtual (opcional pero recomendado)
 ```bash
 python -m venv env_prog
-.venv\Scripts\activate     # En Windows
+env_prog\Scripts\activate     # En Windows
 ```
 
-### 3. Ejecutar el programa
+### 3. Crear la carpeta `data` si no existe
+```bash
+mkdir data
+```
+
+### 4. Ejecutar el programa
 ```bash
 python main.py
 ```
@@ -55,12 +67,12 @@ calculadora_estadisticas/
 ```
 Bienvenido a la Calculadora de Estadísticas Personales
 
-Ingrese una lista de números separados por coma (por ejemplo: 4, 6, 8, 10):
+Ingrese una lista de números separados por comas (por ejemplo: 4, 6, 8, 10):
 > 10, 20, 30, 40
 
 Seleccione una opción:
-1. Calcular estadísticas
-2. Guardar resultados en archivo
+1. Calcular estadísticas descriptivas
+2. Guardar resultados en un archivo
 3. Salir
 > 1
 
@@ -74,6 +86,24 @@ Suma total: 100.0
 Cantidad de valores: 4
 Desviación estándar: 12.91
 Varianza: 166.67
+```
+
+---
+
+## 📄 Ejemplo de archivo de resultados (`data/resultados.txt`)
+
+```
+Datos ingresados por el usuario: 2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0
+
+Estadisticas calculadas:
+Media: 5.5
+Mediana: 5.5
+Moda: 2.0
+Maximo: 9.0
+Minimo: 2.0
+Suma total: 44.0
+Cantidad de valores: 8
+Desviacion estandar: 2.45
 ```
 
 ---
