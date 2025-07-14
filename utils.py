@@ -41,11 +41,8 @@ def guardar_resultados(lista_numeros, estadisticas):
     '''
     Guarda los datos ingresados por el usuario en un archivo de texto.
     '''
-
-    os.makedirs('data', exist_ok=True)
-
     # Usamos 'a' para que los resultados se agreguen al final del archivo
-    with open('data/resultados.txt', 'a') as archivo:
+    with open('calculadora_estadisticas/data/resultados.txt', 'a') as archivo:
         # Convierte la lista de números a un string separado por comas
         datos_str = ','.join(map(str, lista_numeros))
         archivo.write(f"Datos: {datos_str}\n")

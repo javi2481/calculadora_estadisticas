@@ -27,7 +27,7 @@ def main():
             print("Calculando de nuevo para guardar...")
             resultado = calcular_estadisticas(datos)
             guardar_resultados(datos, resultado)
-            print("Resultados guardados en 'data/resultados.txt'.")
+            print("Resultados guardados en 'calculadora_estadisticas/data/resultados.txt'.")
         elif opcion == '3':
             print("Gracias por usar la Calculadora de Estadísticas Personales")
             break
