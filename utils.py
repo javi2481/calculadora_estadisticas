@@ -2,6 +2,8 @@
 Funciones auxiliares: entrada de datos, validacion y guardado en archivo
 '''
 
+
+
 def obtener_datos():
     """
     Solicita al usuario que ingrese una lista de números separados por comas.
@@ -33,17 +35,19 @@ def mostrar_menu():
           """)  # Muestra el menú en pantalla
     return input("Ingrese su opción: ")  # Pide al usuario que ingrese una opción y la devuelve 
 
+
+
 def guardar_resultados(lista_numeros, estadisticas):
     '''
     Guarda los datos ingresados por el usuario en un archivo de texto.
     '''
-    with open('data/resultados.txt', 'w') as archivo:  # Abre el archivo para escribir
-        archivo.write("Datos ingresados por el usuario: ")  # Escribe el título
-        for i in range(len(lista_numeros)):  # Recorre la lista de números
-            archivo.write(str(lista_numeros[i]))  # Escribe el número como texto
-            if i != len(lista_numeros) - 1:  # Si no es el último número
-                archivo.write(',')  # Escribe una coma después
+    # Usamos 'a' para que los resultados se agreguen al final del archivo
+    with open('data/resultados.txt', 'a') as archivo:
+        # Convierte la lista de números a un string separado por comas
+        datos_str = ','.join(map(str, lista_numeros))
+        archivo.write(f"Datos: {datos_str}\n")
         
-        archivo.write('Estadisticas calculadas:\n') 
-        for clave, valor in estadisticas.items():  # Recorre las estadísticas
-            archivo.write(f"{clave}: {valor}\n")  # Escribe cada estadística en el archivo  
+        archivo.write("Resultados:\n")
+        for clave, valor in estadisticas.items():
+            archivo.write(f"- {clave}: {valor}\n")
+        archivo.write("---\n") # Separador para la próxima vez

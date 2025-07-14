@@ -13,6 +13,8 @@ Este proyecto en Python permite al usuario ingresar una serie de números y calc
 
 También ofrece la opción de guardar los resultados en un archivo de texto.
 
+
+
 ---
 
 ## 🛠️ Requisitos previos
@@ -76,35 +78,54 @@ Seleccione una opción:
 3. Salir
 > 1
 
-Resultados de estadísticas calculadas:
-Media: 25.0
-Mediana: 25.0
-Moda: No hay moda o hay múltiples valores más frecuentes
-Máximo: 40.0
-Mínimo: 10.0
-Suma total: 100.0
-Cantidad de valores: 4
-Desviación estándar: 12.91
-Varianza: 166.67
+Resultados:
+- Media: 25.0
+- Mediana: 25.0
+- Moda: No hay moda única
+- Maximo: 40.0
+- Minimo: 10.0
+- Suma total: 100.0
+- Cantidad de valores: 4
+- Desviacion estandar: 12.91
+- Varianza: 166.67
 ```
+
+
 
 ---
 
 ## 📄 Ejemplo de archivo de resultados (`data/resultados.txt`)
 
-```
-Datos ingresados por el usuario: 2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0
+Los resultados se guardan al final del archivo cada vez que se usa la opción 2.
 
-Estadisticas calculadas:
-Media: 5.5
-Mediana: 5.5
-Moda: 2.0
-Maximo: 9.0
-Minimo: 2.0
-Suma total: 44.0
-Cantidad de valores: 8
-Desviacion estandar: 2.45
 ```
+Datos: 10.0,20.0,30.0,40.0
+Resultados:
+- Media: 25.0
+- Mediana: 25.0
+- Moda: No hay moda única
+- Maximo: 40.0
+- Minimo: 10.0
+- Suma total: 100.0
+- Cantidad de valores: 4
+- Desviacion estandar: 12.91
+- Varianza: 166.67
+---
+Datos: 1.0,2.0,3.0
+Resultados:
+- Media: 2.0
+- Mediana: 2.0
+- Moda: No hay moda única
+- Maximo: 3.0
+- Minimo: 1.0
+- Suma total: 6.0
+- Cantidad de valores: 3
+- Desviacion estandar: 1.0
+- Varianza: 1.0
+---
+```
+
+
 
 ---
 
