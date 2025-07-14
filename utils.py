@@ -2,7 +2,7 @@
 Funciones auxiliares: entrada de datos, validacion y guardado en archivo
 '''
 
-
+import os
 
 def obtener_datos():
     """
@@ -41,6 +41,9 @@ def guardar_resultados(lista_numeros, estadisticas):
     '''
     Guarda los datos ingresados por el usuario en un archivo de texto.
     '''
+
+    os.makedirs('data', exist_ok=True)
+
     # Usamos 'a' para que los resultados se agreguen al final del archivo
     with open('data/resultados.txt', 'a') as archivo:
         # Convierte la lista de números a un string separado por comas
